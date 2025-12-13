@@ -1,0 +1,172 @@
+import { Database } from '../types/database';
+
+type League = Database['public']['Tables']['leagues']['Row'];
+type Team = Database['public']['Tables']['teams']['Row'];
+type Player = Database['public']['Tables']['players']['Row'];
+type Transaction = Database['public']['Tables']['transactions']['Row'];
+
+export const mockLeagues: League[] = [
+  {
+    id: '1',
+    name: 'Spring Recreation League',
+    description: 'A fun, recreational league for all skill levels',
+    skill_level: 'beginner',
+    location: 'Central Park Complex',
+    season_start: '2024-03-01',
+    season_end: '2024-06-30',
+    registration_deadline: '2024-02-15',
+    base_fee: 150,
+    max_teams: 12,
+    current_teams: 8,
+    status: 'open',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+  {
+    id: '2',
+    name: 'Competitive Summer League',
+    description: 'High-level competitive play for experienced players',
+    skill_level: 'advanced',
+    location: 'Riverside Sports Complex',
+    season_start: '2024-05-01',
+    season_end: '2024-08-31',
+    registration_deadline: '2024-04-15',
+    base_fee: 250,
+    max_teams: 10,
+    current_teams: 6,
+    status: 'open',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+];
+
+export const mockTeams: Team[] = [
+  {
+    id: '1',
+    name: 'Thunder Bolts',
+    league_id: '1',
+    manager_id: 'manager-1',
+    logo_url: null,
+    description: 'A competitive team focused on having fun while winning games',
+    max_players: 15,
+    current_players: 12,
+    total_fee: 1800,
+    paid_amount: 1200,
+    status: 'active',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+  {
+    id: '2',
+    name: 'Base Crushers',
+    league_id: '2',
+    manager_id: 'manager-2',
+    logo_url: null,
+    description: 'Elite competitive team seeking championship glory',
+    max_players: 16,
+    current_players: 14,
+    total_fee: 3500,
+    paid_amount: 2800,
+    status: 'active',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+];
+
+export const mockPlayers: Player[] = [
+  {
+    id: '1',
+    user_id: 'user-1',
+    team_id: '1',
+    jersey_number: 10,
+    position: 'Shortstop',
+    emergency_contact: 'Jane Doe',
+    emergency_phone: '555-0123',
+    payment_status: 'paid',
+    amount_paid: 150,
+    amount_due: 0,
+    is_free_agent: false,
+    bio: 'Experienced player with 5 years of competitive softball',
+    experience_level: 'intermediate',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+  {
+    id: '2',
+    user_id: 'user-2',
+    team_id: '1',
+    jersey_number: 7,
+    position: 'Pitcher',
+    emergency_contact: 'Bob Smith',
+    emergency_phone: '555-0456',
+    payment_status: 'partial',
+    amount_paid: 75,
+    amount_due: 75,
+    is_free_agent: false,
+    bio: 'Former college player looking to get back into competitive play',
+    experience_level: 'advanced',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+];
+
+export const mockTransactions: Transaction[] = [
+  {
+    id: '1',
+    player_id: '1',
+    team_id: '1',
+    amount: 150,
+    type: 'registration',
+    status: 'completed',
+    payment_method: 'credit_card',
+    transaction_id: 'txn_1234567890',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+  {
+    id: '2',
+    player_id: '2',
+    team_id: '1',
+    amount: 75,
+    type: 'registration',
+    status: 'completed',
+    payment_method: 'credit_card',
+    transaction_id: 'txn_0987654321',
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+];
+
+// Mock user data for different roles
+export const mockUsers = {
+  player: {
+    id: 'user-1',
+    email: 'player@example.com',
+    full_name: 'John Player',
+    phone: '555-0123',
+    role: 'player' as const,
+    avatar_url: null,
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+  manager: {
+    id: 'manager-1',
+    email: 'manager@example.com',
+    full_name: 'Sarah Manager',
+    phone: '555-0456',
+    role: 'manager' as const,
+    avatar_url: null,
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+  director: {
+    id: 'director-1',
+    email: 'director@example.com',
+    full_name: 'Mike Director',
+    phone: '555-0789',
+    role: 'director' as const,
+    avatar_url: null,
+    created_at: '2024-01-01T00:00:00Z',
+    updated_at: '2024-01-01T00:00:00Z',
+  },
+};
