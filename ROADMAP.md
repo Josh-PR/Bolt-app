@@ -42,7 +42,7 @@ Goal:
 ## Milestone 2 — Core Functional MVP
 
 ### Objective
-Deliver the core functionality required to support real teams, players, and leagues.
+Deliver the core functionality required to support sports teams, players, and league directors.
 
 ### Scope
 
@@ -83,17 +83,33 @@ Deliver the core functionality required to support real teams, players, and leag
 -   RSVP tracking
 
 **Notifications**
-- Push Notifications
-- Mute Group
+- Star/follow chats and players to get notifications
+- Push in-app Notifications
+- Mute chat
 - Mute Individual Chats
 - Mute Individual Users
 - Notification Overrides per Chat like @Mention Alerts
 - Topic-Specific Notifications
 
-**Tasks across all dashboards**
-- 
+**Task module across all dashboards**
+- Connected to in-app notifications and emails
+- Types of tasks
+-   RSVP to Event/Game
+-   Pay for player fee payment
+-   Jersey Order Payment
+-   Set lineups and positions (Softball)
+-   Team fee due - Payments remaining 
+
+**All dashboards consist of the following**
+- Header with Dashboard Type & Sport, User Name, notification icon, and profile pitcture
+- image carousel for ads, marketing, updates, etc.
+- Quick Action Bar
+- Task list or Important Dates
+- 4 display stat icons
+- Footer with navigation icons (Specific to each Role) 
 
 **Player Dashboard**
+- Navigation icons; Dashboard, Play, Messages, My Teams 
 - Team & Player communication (player to player direct messaging, league specific chat rooms, team specific chat rooms)
 - Team creation and management (coach/admin)
 - Player invitation to teams and team chats and acceptance flow
@@ -104,9 +120,12 @@ Deliver the core functionality required to support real teams, players, and leag
 - Limited league director functionality (league creation, team invitations, payment collection)
 
 **Coach Dashboard**
-- Team Chat specifically for the players on the team (Comments, threads, images and attachments, 
+- Navigation icons; Dashboard, Play, Messages, My Teams, Recruitment 
+- Team Chat specifically for the players on the team
+- Tasks/Important dates specific to managers
 
 **Director Dashboard**
+- Navigation icons; Dashboard, Messages, My Leagues, Recruitment 
 - League specific chat rooms that are created and published by league directors
 
 ### Review Gate (Acceptance Criteria)
