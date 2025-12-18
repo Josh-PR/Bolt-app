@@ -128,6 +128,11 @@ Deliver the core functionality required to support sports teams, players, and le
 - Navigation icons; Dashboard, Messages, My Leagues, Recruitment 
 - League specific chat rooms that are created and published by league directors
 
+**Payment Modal**
+- Leagues that are created can set team fees, ball fees, and additional fees to be collected from coaches
+- Coaches submit their team to the league and chooses how many players they have app sets the total fees due for team
+- Players are added to teams and the app breaks up the total payment into X number of players to pay separately 
+
 ### Review Gate (Acceptance Criteria)
 - A coach can create and manage a team end-to-end
 - Players can join teams they are invited to, join league chats, chat directly with other players, RSVP to events, and submit payments
@@ -139,10 +144,30 @@ Milestone 2 must be reviewed and approved before payment is released.
 
 ---
 
+## Milestone 3 — Refinement & Deployment Readiness
 
+### Objective
+Prepare the app for public release and App Store submission.
 
+### Scope
+- UX polish and edge case handling
+- Performance and stability improvements
+- App Store configuration and assets
+- Production environment setup
+- TestFlight build and testing
+- Privacy policy and compliance requirements
+- App Store submission support
 
+### Review Gate (Acceptance Criteria)
+- App installs and runs via TestFlight
+- No known critical or high-severity bugs
+- Production backend is live and stable
+- App Store submission is completed or approved
+- All issues assigned to this milestone are closed
 
+Final approval is required before final payment.
 
+---
 
-
+## Notes
+This roadmap may evolve slightly as development progresses, but milestone objectives and review gates must be agreed upon before changes are made.
