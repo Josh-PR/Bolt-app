@@ -42,105 +42,161 @@ Goal:
 ## Milestone 2 — Core Functional MVP
 
 ### Objective
-Deliver the core functionality required to support sports teams, players, and league directors.
+Deliver the minimum viable functionality required to support sports teams, players, and league directors.
 
-### Scope
+This milestone focuses on **MVP-level implementations** of core features.  
+Advanced or extended functionality may be deferred unless explicitly agreed upon.
 
-**Chat functionality across all types of chats**
-- Group Chats
+---
+
+### 2.1 Must-Haves (Required for MVP)
+
+These features are required for the app to function in real-world use.
+
+#### Core Chat (MVP)
+- Group chats (team-level and league-level)
 - Direct Messages (1:1)
-- Threaded “Topics” (topic-based conversations within a league or team chat)
-- Threaded comments (replies to specific comments that can be toggled to see the conversation)
-- Message Editing (within a limited time window)
-- Message Deletion
-- @Mentions (notify specific users, admins, or directors)
-- Read Receipts (limited / implicit)
-- Message Reactions (likes, hearts, emojis)
-- Photo Sharing, Video Sharing, Sharing GIFs, Common File Attachment types
-- Camera Access (take photo/video directly)
-- Image Preview & Fullscreen View
-- Save Images to Device
-- Link Previews
-- Pinned Messages
-- Pinned Topics
-- Search Within Chat
-- Jump to Latest / Jump to First Message
-- Create Group chats and Send DMs
-- Join via Invite Link
-- QR Code Invites
-- Admin Controls
-- Admin/Coach/Director can Add / Remove players
-- Rename Chat
-- Change Chat avatar
-- Assign Multiple Admins
-- Group Description / Bio
-- Group Settings (open vs closed)
-- Polls
--   Multiple choice
--   Live vote counts
-- Calendar Events
--   Create events
--   RSVP tracking
+- Send text messages
+- Photo sharing
+- Basic file attachments
+- Message timestamps
+- Join chats via invite link
+- Admin controls:
+  - Add or remove members
+  - Assign at least one admin
 
-**Notifications**
-- Star/follow chats and players to get notifications
-- Push in-app Notifications
-- Mute chat
-- Mute Individual Chats
-- Mute Individual Users
-- Notification Overrides per Chat like @Mention Alerts
-- Topic-Specific Notifications
+#### Core Notifications
+- In-app notifications for:
+  - Messages
+  - Invites
+  - Task-related actions
+- Ability to mute entire chats
 
-**Task module across all dashboards**
-- Connected to in-app notifications and emails
-- Types of tasks
--   RSVP to Event/Game
--   Pay for player fee payment
--   Jersey Order Payment
--   Set lineups and positions (Softball)
--   Team fee due - Payments remaining 
+#### Core Tasks Module
+- Task types:
+  - RSVP to event or game
+  - Player fee payment
+  - Team fee payment
+- Task completion tracking
+- Tasks connected to in-app notifications
 
-**All dashboards consist of the following**
-- Header with Dashboard Type & Sport, User Name, notification icon, and profile pitcture
-- image carousel for ads, marketing, updates, etc.
-- Quick Action Bar
-- Task list or Important Dates
-- 4 display stat icons
-- Footer with navigation icons (Specific to each Role) 
+#### Dashboards (MVP)
+All dashboards include:
+- Header (role, sport, user name, notifications, profile access)
+- Task list or important dates
+- Footer navigation (role-specific)
 
-**Player Dashboard**
-- Navigation icons; Dashboard, Play, Messages, My Teams 
-- Team & Player communication (player to player direct messaging, league specific chat rooms, team specific chat rooms)
-- Team creation and management (coach/admin)
-- Player invitation to teams and team chats and acceptance flow
-- Team Manager invite review (Accept/Decline Invites) 
-- Roster visibility
-- Payment collection and payment status tracking for team managers and their players (venmo, zelle, CC/DC, paypal, apple pay, google pay) 
-- Game event creation and player RSVP tracking
-- Limited league director functionality (league creation, team invitations, payment collection)
+#### Player Dashboard (MVP)
+- Join teams via invite
+- Access team and league chats
+- View roster
+- RSVP to events
+- Submit payments
+- View payment progress (without individual payer details)
 
-**Coach Dashboard**
-- Navigation icons; Dashboard, Play, Messages, My Teams, Recruitment 
-- Team Chat specifically for the players on the team
-- Tasks/Important dates specific to managers
+#### Coach Dashboard (MVP)
+- Create and manage teams
+- Invite players
+- View roster
+- View payment status
+- Team chat access
+- Manage team-related tasks
 
-**Director Dashboard**
-- Navigation icons; Dashboard, Messages, My Leagues, Recruitment 
-- League specific chat rooms that are created and published by league directors
+#### Director Dashboard (MVP)
+- Create leagues
+- Create league chat rooms
+- Invite teams
+- View team payment status
 
-**Payment Modal**
-- Leagues that are created can set team fees, ball fees, and additional fees to be collected from coaches
-- Coaches submit their team to the league and chooses how many players they have app sets the total fees due for team
-- Players are added to teams and the app breaks up the total payment into X number of players to pay separately 
+#### Payments (MVP)
+- League directors can configure:
+  - Team fees
+  - Ball fees
+  - Additional fees
+- Coaches submit teams and select roster size
+- Total fees calculated automatically
+- Players pay individual portions
+- Basic payment status tracking
+
+---
+
+### 2.2 Nice-to-Haves (Lower Complexity Enhancements)
+
+These features improve usability but are not required for core operation.
+
+#### Chat Enhancements
+- Message reactions (likes, hearts, emojis)
+- Image preview and fullscreen view
+- Save images to device
+- Link previews
+- Pinned messages
+- Search within chat
+- Rename chats
+- Change chat avatar
+- Group description or bio
+
+#### Notification Enhancements
+- Star or follow chats and users
+- Notification overrides for @mentions
+
+#### Events and Engagement
+- Calendar event creation
+- RSVP tracking enhancements
+- Polls (simple multiple choice with live vote counts)
+
+#### UI Enhancements
+- Image carousel for announcements or marketing
+- Quick action bar on dashboards
+- Display stat icons
+
+---
+
+### 2.3 Advanced / High-Complexity Features
+
+These features are complex and may be implemented partially or deferred.
+
+#### Advanced Chat
+- Threaded topics within chats
+- Threaded replies to messages
+- Read receipts (implicit or limited)
+- Message editing (time-limited)
+- Message deletion
+- Jump to first or latest message
+- GIF sharing
+- Video sharing
+- QR code invites
+
+#### Advanced Notifications
+- Topic-specific notifications
+- Mute individual users
+- Notification rules per chat
+
+#### Advanced Payments
+- Support for multiple payment providers:
+  - Venmo
+  - Zelle
+  - Apple Pay
+  - Google Pay
+  - Credit or debit cards
+- Automatic fee rebalancing when players join or leave teams
+
+#### Advanced Team and League Features
+- Recruitment module
+- Lineup and position setting (Softball)
+- Multi-admin role permissions
+- Advanced reporting
+
+---
 
 ### Review Gate (Acceptance Criteria)
 - A coach can create and manage a team end-to-end
-- Players can join teams they are invited to, join league chats, chat directly with other players, RSVP to events, and submit payments
-- Payment status is visible to coaches only, players just see how many players have paid so far
+- Players can join teams, chat, RSVP to events, and submit payments
+- League directors can create leagues and manage team participation
 - No blocking bugs preventing real usage
 - All issues assigned to this milestone are closed
 
 Milestone 2 must be reviewed and approved before payment is released.
+
 
 ---
 
