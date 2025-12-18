@@ -1,4 +1,4 @@
-# Project Roadmap — PineRiders League Management App
+# Project Roadmap — PineRiders PROChat App
 
 ## Overview
 This document outlines the agreed-upon milestones for completing and publishing the PineRiders League Management App.  
