@@ -18,6 +18,7 @@ Stabilize the foundational systems of the app so that user data, authentication,
 - Authentication and login flow stability for all 3 user roles
 - User creation and onboarding flow with custom data being added to the database
 - User selects the sport they are joining (Softball or Bowling) Fields are conditional based on selection
+- Set location for leagues within certain proximity
 - Users are able to update their data (Profile, email, password, etc.) from within the app
 - Configure confirmation emails, Password reset emails, and incomplete profile emails
 - Supabase schema integrity and relationships
@@ -54,23 +55,22 @@ Advanced or extended functionality may be deferred unless explicitly agreed upon
 These features are required for the app to function in real-world use.
 
 #### Core Chat (MVP)
-- Group chats (team-level and league-level)
+- Group chats (team-level, league-level, more than 2 users)
 - Direct Messages (1:1)
-- Send text messages
 - Photo sharing
 - Basic file attachments
 - Message timestamps
 - Join chats via invite link
-- Admin controls:
+- Admin controls: (Team-level & League-level)
   - Add or remove members
-  - Assign at least one admin
+  - Assign additional admins
 
 #### Core Notifications
 - In-app notifications for:
   - Messages
   - Invites
   - Task-related actions
-- Ability to mute entire chats
+- Ability to mute team chats, league chats, or individual players
 
 #### Core Tasks Module
 - Task types:
@@ -83,30 +83,42 @@ These features are required for the app to function in real-world use.
 #### Dashboards (MVP)
 All dashboards include:
 - Header (role, sport, user name, notifications, profile access)
-- Task list or important dates
+- Quick Actions bar
+- Task module list and important dates
 - Footer navigation (role-specific)
 
 #### Player Dashboard (MVP)
-- Join teams via invite
 - Access team and league chats
-- View roster
-- RSVP to events
 - Submit payments
 - View payment progress (without individual payer details)
 
 #### Coach Dashboard (MVP)
 - Create and manage teams
-- Invite players
-- View roster
-- View payment status
-- Team chat access
 - Manage team-related tasks
 
 #### Director Dashboard (MVP)
 - Create leagues
-- Create league chat rooms
+- Create league chat room
 - Invite teams
 - View team payment status
+
+**Team Page**
+- Resource links (Next Event RSVP totals, Season Schedule, Season Standings) 
+- Invite players via invite link
+- View roster
+- Team Chat
+- View player payment statuses
+- View team roster & positions
+- RSVP to games/events
+
+**Play Page**
+- Register as Free Agent
+- Search and filter leagues (Skill Level, Divisions, and League Status)
+- League "Cards" that show
+-   Location - Link to open in maps
+-   Season Name & Duration
+-   Team Fee
+-   Number of Teams
 
 #### Payments (MVP)
 - League directors can configure:
@@ -117,6 +129,10 @@ All dashboards include:
 - Total fees calculated automatically
 - Players pay individual portions
 - Basic payment status tracking
+
+#### UI Enhancements
+- Image carousel for announcements or marketing
+- Quick action bar on dashboards
 
 ---
 
@@ -145,8 +161,6 @@ These features improve usability but are not required for core operation.
 - Polls (simple multiple choice with live vote counts)
 
 #### UI Enhancements
-- Image carousel for announcements or marketing
-- Quick action bar on dashboards
 - Display stat icons
 
 ---
